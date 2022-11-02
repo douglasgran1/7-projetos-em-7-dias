@@ -29,6 +29,8 @@
 
     document.querySelector('.color.active').classList.remove('active')
     e.target.classList.add('active')
+
+    document.querySelector('.color.current').style.backgroundColor = color
   }
 
   function mouseDownEvent(e) {
@@ -70,4 +72,11 @@
   function clearScreen() {
     ctx.setTransform(1,0, 0, 1, 0, 0)
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
+  }
+
+  function currentColorSelected(e) {
+        document.body.style.backgroundColor = "red";
+
+
+
   }
